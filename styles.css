@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body {
+    background: pink;
+}
+
+
+.start_btn,
+.Rules{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.start_btn button{
+    font-size: 25px;
+    font-weight: 500;
+    color: purple;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.Rules{
+    display: none;
+    width: 540px;
+    background: white;
+    border-radius: 5px;
+}
+
+.Rules .Rules_titles{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.Rules .Rules_lis {
+    padding: 15px 35px;
+  
+}
+.Rules .Rules_list .info{
+    margin: 5px  0;
+    font-size: 17px;
+}
+
+.Rules .button{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid lightblue;
+}
+.Rules .button button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+.button button.restart{
+    color: violet;
+    border-color: teal;
+
+}
+.button button.restart:hover{
+    background: tomato;
+}
