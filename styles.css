@@ -79,12 +79,12 @@ body {
     font-size: 16px;
     font-weight: 500;
 }
-.button button.restart{
+.button button.continue_btn{
     color: violet;
     border-color: teal;
 
 }
-.button button.restart:hover{
+.button button.continue_btn:hover{
     background: tomato;
 }
 
