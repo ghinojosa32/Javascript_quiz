@@ -52,5 +52,38 @@ function startTimer() {
 
 startButton.addEventListener("click", startQuiz);
 
+// for each question...
+myQuestions.forEach(
+    (currentQuestion, questionNumber) => {
+
+      // stores the list of possible answers
+      var answers = [];
+
+      // and for each available answer add an HTML radio button
+
+      for(letter in currentQuestion.answers){
+
+        answers.push(
+          `<label>
+            <input type="radio" name="question${questionNumber}" value="${letter}">
+            ${letter} :
+            ${currentQuestion.answers[letter]}
+          </label>`
+        );
+      }
+
+      // this adds the question and its answers to the output
+      output.push(
+        `<div class="slide">
+          <div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join("")} </div>
+        </div>`
+      );
+    }
+  );
+
+  // combines output list into one string of HTML and it also adds it to the page
+  quizContainer.innerHTML = output.join('');
+  }
 
 
