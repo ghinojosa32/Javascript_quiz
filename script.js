@@ -223,3 +223,49 @@ myQuestions.forEach(
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
 
+  var initialsInput = document.querySelector("#initials");
+  var scoreInput = document.querySelector("#score");
+  var saveButton = document.querySelector("#save");
+  var msgDiv = document.querySelector("#msg");
+  var userInitialsSpan = document.querySelector("#user-initials");
+  var userScoreSpan = document.querySelector("#user-score");
+  
+  
+  renderLastRegistered();
+  
+  function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDiv.setAttribute("class", type);
+  }
+  
+  function renderLastRegistered() {
+    var initials = localStorage.getItem("initials");
+    var score = localStorage.getItem("score");
+  
+    if (!initials || !score) {
+      return;
+   }
+  
+    userInitialsSpan.textContent = initials;
+    userScoreSpan.textContent = score;
+  }
+  
+  saveButton.addEventListener("click", function(event) {
+    event.preventDefault();
+  
+    var initials = document.querySelector("#initials").value;
+    var score = document.querySelector("#score").value;
+  
+    if (initials === "") {
+      displayMessage("error", "Initials cannot be blank");
+    } else if (score === "") {
+      displayMessage("error", "Score cannot be blank");
+    } else {
+      displayMessage("success", "Registered successfully");
+  
+      localStorage.setItem("initials", initials);
+      localStorage.setItem("score", score);
+      renderLastRegistered();
+    }
+  });
+
