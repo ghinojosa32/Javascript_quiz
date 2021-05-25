@@ -8,76 +8,70 @@
 </head>
 
 <body>
-    <div class="start_btn"><button>Start Quiz</button></div>
 
+<header>
+        <div class= "large-font">Coding Quiz</div>
+        <button class= "start-button">Start</button>
+    
+ </header>
 
+<main>
+<br>
 
-    <div class="Rules">
-       <div class="Rules_title">
-           <span>Rules for Coding Quiz</span>
-       </div>
-       <div class="Rules_list">
-           <div class="Info">1. You have 1 minute to finish the Quiz</div>
-           <div class="Info">2. There are 5 questions with Multiple choice</div>
-           <div class="Info">3. If you get a Question wrong you loose 5 seconds</div>
-           <div class="Info">4. Each quesion is worth 1 point</div>
-       </div>
-       <div class="button">
-           <button class="continue_btn">Continue</button>
-       </div>
-    </div>
+<section>
 
-    <div class="quiz_box">
-        <header>
-            <div class="title">Awesome Quiz Application</div>
-            <div class="timer">
-                <div class="time_text">
-                <div class="timer_sec"></div>
-                </div>
-            </div>
-        </header>
-        <section>
-            <div class="que_text">
-              <span>What does HTMl stand for?</span>
-            </div>
-            <div class="option_list">
-                    <div class="option">
-                        <span>#</span>
-                        <div class="icon check"><i class="fas fa-check"></i></div>
-                    </div>
-
-                    <div class="option">
-                        <span>#</span>
-                        <div class="icon cross"><i class="fas fa-check"></i></div>
-                    </div>
-                    <div class="option">
-                        <span>#</span>
-                    </div>
-                    <div class="option">
-                        <span>#</span>
-                    </div>
-            </div>
-        </section>
-        <footer>
-            <div class="total_que">
-                <span><p>2</p>of<p>5</p>Questions</span>
-            </div>
-            <button class="next_btn">Next Question</button>
-        </footer>
-    </div>
-
-    <div class="result_box">
-        <div class="complete_text">You have completed the Quiz!</div>
-        <div class="Score_text">
-            <span>and sorry, you got only <p>2</p> out of<p>5</p></span>
-        </div>
-        <div class="buttons">
-        <button class="Restart">Redo quiz</button>
-        <button class="Quit">Quit Quiz</button>
-    </div>
+<div class="quiz-container">
+<div id="quiz"></div>
 </div>
+</section>
+<br>
 
-<script src="script.js"></script>
+<section>
+<button id="previous">Previous Question</button>
+
+<button id="next">Next question</button>
+
+<button id="submit">Get Results</button>
+
+<div id="results"></div>
+
+<div class= "card timer">
+    <div class = "timer-text">
+    <div class="large-font timer-count">20</div>
+    <h2>seconds remaining</h2>
+  </div>
+
+</section>
+<br>
+
+<div class="Save-score">
+    <div class="card">
+      <h2>Save Score</h2>
+      <form method="POST">
+        <div class="input-group">
+          <label for="initials">initials</label>
+          <input type="text" name="initials" id="initials" placeholder="GH" />
+        </div>
+        <div class="input-group">
+          <label for="score">Score</label>
+          <input type="score" name="score" id="score" placeholder="5" />
+        </div>
+        <div id="msg"></div>
+        <br>
+        <button id="save">Save Score</button>
+      </form>
+    </div>
+    <div class="card">
+      <h2>Last Registered User:</h2>
+      <p><strong>Initialse:</strong> <span id="user-initials"></span></p>
+      <p><strong>Score:</strong> <span id="user-score"></span></p>
+    </div>
+  </div>
+
+
+</main>
+
+<script src='script.js'></script>
 
 </body>
 </html>
